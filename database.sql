@@ -1,3 +1,6 @@
+-- in postico create a database and name it: `react_gallery`
+
+
 CREATE TABLE gallery (
 	"id" serial primary key,
 	"path" varchar(80) not null,
