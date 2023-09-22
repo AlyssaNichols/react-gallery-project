@@ -30,9 +30,9 @@ export default function GalleryItem({item, clickLike}){
              <br/>
             <br/>
             <p style={{
-                height: "200px",
+                height: "100px",
                 textAlign: "center",
-                width: "500px",
+                width: "370px",
                 fontSize: "18px"
             }}>{item.description}</p>
             <p style={{
