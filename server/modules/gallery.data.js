@@ -1,6 +1,6 @@
 const galleryItems = [
 { id: 1, path: 'images/mtb.jpg', description: 'Mountain biking outing for our 2 year anniversary.', likes: 0 },
-{ id: 2, path: 'images/camping.JPG', description: 'The yearly october camping trip with my wife, brother, and sister in law.', likes: 0 },
+{ id: 2, path: 'images/camping.JPG', description: 'The yearly October camping trip with my wife, brother, and sister in law.', likes: 0 },
 { id: 3, path: 'images/fin-boi.jpg', description: 'My cat Fin who is such a handsome boi.', likes: 0 },
 { id: 4, path: 'images/fam-boat.jpg', description: 'Family pontoon rides in the summer are one of my favorite things to do.', likes: 0 },
 { id: 5, path: 'images/wedding-pic.jpg', description: 'One of my favorite pictures from our wedding day.', likes: 0 },
