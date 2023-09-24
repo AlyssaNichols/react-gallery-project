@@ -3,7 +3,7 @@
 
 CREATE TABLE gallery (
 	"id" serial primary key,
-	"path" varchar(80) not null,
+	"path" varchar(200) not null,
 	"description" varchar(1000),
 	"likes" int default 0
 );

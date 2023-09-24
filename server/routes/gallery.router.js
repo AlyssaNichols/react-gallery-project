@@ -53,9 +53,9 @@ pool
 // //POST to add new photo into gallery
 router.post('/', (req, res) => {
     const photo = req.body;
-    const query = `INSERT INTO "gallery" ("path", "title", "description")
-                   VALUES ($1, $2, $3);`;
-    pool.query(query, [photo.path, photo.title, photo.description])
+    const query = `INSERT INTO "gallery" ("path", "description")
+                   VALUES ($1, $2);`;
+    pool.query(query, [photo.path, photo.description])
         .then(() => {
             res.sendStatus(201);
         })

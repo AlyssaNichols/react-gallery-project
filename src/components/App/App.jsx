@@ -2,10 +2,13 @@ import React, {useState, useEffect} from 'react';
 import axios from "axios";
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
+import AddForm from '../AddForm/AddForm';
 
 
 function App() {
 const [galleryList, setGalleryList] = useState([])
+let [newPath, setNewPath] = useState("");
+let [newDescription, setNewDescription] = useState("");
 
 useEffect(() => {
   getGallery();
@@ -48,6 +51,7 @@ const handleDelete = (id) => {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
+<AddForm getGallery={getGallery} newPath={newPath} setNewPath={setNewPath} newDescription={newDescription} setNewDescription={setNewDescription}/>
         <GalleryList clickLike={clickLike} galleryList={galleryList} handleDelete={handleDelete}/>
       </div>
     );
