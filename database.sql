@@ -6,7 +6,7 @@ CREATE TABLE gallery (
 	"id" serial primary key,
 	"path" varchar(200) not null,
 	"title" varchar (200),
-	"description" varchar(1000),
+	"description" varchar(1000) not null,
 	"likes" int default 0
 );
 

@@ -41,12 +41,13 @@ export default function AddForm({
   // what will post to the page
   return (
     <>
-      <h2>Add Photo to the Gallery</h2>
+      <h2 className="formHeader">Add Photo to the Gallery</h2>
       <input
         placeholder="Image URL"
         className="form-inputs"
         value={newPath}
         onChange={(event) => setNewPath(event.target.value)}
+        required
       ></input>
       <input
         placeholder="Image Title"
@@ -59,6 +60,7 @@ export default function AddForm({
         className="form-inputs"
         value={newDescription}
         onChange={(event) => setNewDescription(event.target.value)}
+        required
       ></input>
       <div className="addFormButtonDiv">
         <br />
