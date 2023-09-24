@@ -1,43 +1,25 @@
 const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool');
-const galleryItems = require('../modules/gallery.data');
+// const galleryItems = require('../modules/gallery.data');
 
-// DO NOT MODIFY THIS FILE FOR BASE MODE
 
-// PUT Route
+// PUT Route from DB
 router.put('/like/:id', (req, res) => {
     console.log(req.params);
     const id = req.params.id;
-    const query = `INSERT INTO "gallery" ("path", "title", "description")
-                   VALUES ($1, $2, $3);`;
-    pool
-    .query(query, [photo.path, photo.title, photo.description])
-        .then(() => {
-            res.sendStatus(204);
-        }).catch((err) => {
-            console.log("error in PUT", err);
-            res.sendStatus(500);
+    const queryText = `UPDATE "gallery" SET "likes"=("likes"+1) WHERE "id"=$1;`;
+    pool.query(queryText, [id])
+        .then((results) => {
+        res.send(`Liked photo id of: ${id}`).status(200);
+        })
+        .catch((error) => {
+            console.log("error caught in PUT /like: ", error);
         });
-});
-// for(const galleryItem of galleryItems) {
-//     if(galleryItem.id == galleryId) {
-//         galleryItem.likes += 1;
-//     }
-// }
-// res.sendStatus(200);
-//  END PUT Route
+    });
+// END PUT ROUTE
 
-
-
-
-
-// GET Route provided
-// router.get('/', (req, res) => {
-//     res.send(galleryItems);
-// }); 
-// END GET Route
-
+// GET route from DB
 router.get('/', (req, res) => {
 const queryText = `SELECT * FROM "gallery" ORDER BY "id" ASC;`;
 pool
@@ -50,13 +32,14 @@ pool
     res.sendStatus(500);
 });
 });
+// END GET ROUTE
 
 // //POST to add new photo into gallery
 router.post('/', (req, res) => {
     const photo = req.body;
-    const query = `INSERT INTO "gallery" ("path", "description")
-                   VALUES ($1, $2);`;
-    pool.query(query, [photo.path, photo.description])
+    const query = `INSERT INTO "gallery" ("path", "title", "description")
+                   VALUES ($1, $2, $3);`;
+    pool.query(query, [photo.path, photo.title, photo.description])
         .then(() => {
             res.sendStatus(201);
         })
@@ -78,5 +61,29 @@ router.delete("/delete/:id", (req, res) => {
             res.sendStatus(500);
         });
 }); // END DELETE ROUTE
+
+
+
+// DO NOT MODIFY THIS FILE FOR BASE MODE
+
+
+// what was originally the meat of the put function before DB hookup
+// for(const galleryItem of galleryItems) {
+//     if(galleryItem.id == galleryId) {
+//         galleryItem.likes += 1;
+//     }
+// }
+// res.sendStatus(200);
+//  END PUT Route
+
+
+
+
+
+// GET Route provided before DB hookup
+// router.get('/', (req, res) => {
+//     res.send(galleryItems);
+// }); 
+// END GET Route
 
 module.exports = router;
