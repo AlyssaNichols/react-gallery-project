@@ -20,13 +20,14 @@ npm run client
 
 There is no database component to this so all the data is stored in an array on the server. Each image has an `id`, `title`, `description` and `path for` to access them. Each `id` is a unique number.
 
-In this proeject I have created a gallery page to share pictures of things that are important to me. Visitors can click on an image to see a description and use a button to "like" an image. 
+In this project I have created a gallery page to share pictures of things that are important to me. Visitors can click on an image to see a description and use a button to "like" an image. 
 
-In this project I used 3 components:
+In this project I used 4 components:
 
 - `App` - represents the overall application or site 
 - `GalleryList` - represents the gallery of images
 - `GalleryItem` - represents a single image in the gallery with the ability to click the image to toggle between image and description as well as the ability to like an image.
+- `Add Form` - represents the overall application or site 
 
 ### Tasks completed
 - Use `axios` to retrieve (`GET`) data from to `/gallery` and store it in `App.jsx`.

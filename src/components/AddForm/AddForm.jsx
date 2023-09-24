@@ -4,7 +4,7 @@ import {useState} from "react";
 // This function will display or hide an "add a photo" form
 // with text inputs for the img url, a title and a description of the photo
 // It will also do a POST with the new information and add it to the database
-export default function AddForm({getGallery, newPath, setNewPath, newDescription, setNewDescription}) {
+export default function AddForm({getGallery, newTitle, setNewTitle, newPath, setNewPath, newDescription, setNewDescription}) {
 
 
     // POST FUNCTION
@@ -26,10 +26,6 @@ export default function AddForm({getGallery, newPath, setNewPath, newDescription
         });
     };
 
-    // Determines what should be rendered depending on the toggle's
-    // current state
-    // If the toggle is false, then display the form and inputs
-
         return (
             <>
             <h2>Add Photo</h2>
@@ -38,6 +34,12 @@ export default function AddForm({getGallery, newPath, setNewPath, newDescription
                 className="form-inputs"
                 value={newPath}
                 onChange={(event) => setNewPath(event.target.value)}>
+            </input>
+            <input 
+                placeholder="Title"
+                className="form-inputs"
+                value={newTitle}
+                onChange={(event) => setNewTitle(event.target.value)}>
             </input>
             <input 
                 placeholder="Description"

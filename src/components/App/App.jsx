@@ -5,15 +5,17 @@ import GalleryList from '../GalleryList/GalleryList';
 import AddForm from '../AddForm/AddForm';
 
 
+// use state in this component and pass through the props
 function App() {
 const [galleryList, setGalleryList] = useState([])
 let [newPath, setNewPath] = useState("");
 let [newDescription, setNewDescription] = useState("");
+let [newTitle, setNewTitle] = useState("");
 
 useEffect(() => {
   getGallery();
 }, []);
-
+// axios get function
 const getGallery = () => {
   console.log("running getGallery")
   axios.get('/gallery')
@@ -51,7 +53,7 @@ const handleDelete = (id) => {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-<AddForm getGallery={getGallery} newPath={newPath} setNewPath={setNewPath} newDescription={newDescription} setNewDescription={setNewDescription}/>
+<AddForm getGallery={getGallery} newTitle={newTitle} setNewTitle={setNewTitle} newPath={newPath} setNewPath={setNewPath} newDescription={newDescription} setNewDescription={setNewDescription}/>
         <GalleryList clickLike={clickLike} galleryList={galleryList} handleDelete={handleDelete}/>
       </div>
     );

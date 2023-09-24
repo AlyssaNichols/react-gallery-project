@@ -9,9 +9,10 @@ const galleryItems = require('../modules/gallery.data');
 router.put('/like/:id', (req, res) => {
     console.log(req.params);
     const id = req.params.id;
-    let queryText = `UPDATE "gallery" SET "likes" = (likes + 1) WHERE "id" = $1; `;
-        pool
-        .query(queryText, [id])
+    const query = `INSERT INTO "gallery" ("path", "title", "description")
+                   VALUES ($1, $2, $3);`;
+    pool
+    .query(query, [photo.path, photo.title, photo.description])
         .then(() => {
             res.sendStatus(204);
         }).catch((err) => {
