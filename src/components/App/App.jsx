@@ -5,7 +5,7 @@ import GalleryList from '../GalleryList/GalleryList';
 
 
 function App() {
-const [gallery, setGallery] = useState([])
+const [galleryList, setGalleryList] = useState([])
 
 useEffect(() => {
   getGallery();
@@ -15,7 +15,7 @@ const getGallery = () => {
   console.log("running getGallery")
   axios.get('/gallery')
     .then((response) => {
-      setGallery(response.data);
+      setGalleryList(response.data);
     })
     .catch((error) => {
       console.log('Error in GETting gallery', error);
@@ -32,13 +32,23 @@ const clickLike = (id) => {
     });
 };
 
+const handleDelete = (id) => {
+  axios
+    .delete(`/gallery/delete/${id}`)
+    .then((response) => {
+      getGallery();
+    })
+    .catch((error) => {
+      console.log("Error in handleDelete", error);
+    });
+};
 
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <GalleryList clickLike={clickLike} gallery={gallery}/>
+        <GalleryList clickLike={clickLike} galleryList={galleryList} handleDelete={handleDelete}/>
       </div>
     );
 }

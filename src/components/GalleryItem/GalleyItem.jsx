@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-export default function GalleryItem({item, clickLike}){
+export default function GalleryItem({item, clickLike, handleDelete}){
 
     const [showImage, setShowImage] = useState(true);
     
@@ -46,6 +46,7 @@ export default function GalleryItem({item, clickLike}){
         <br/>
         <br/>
       <button className="likeButton" onClick={() => clickLike(item.id)}>Love this pic!</button>
+      <button className="deleteButton" onClick={() => handleDelete(item.id)}>Delete this pic</button>
       <p>{item.likes} people love this pic</p>
     </div>
         </>

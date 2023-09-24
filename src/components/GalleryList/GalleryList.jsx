@@ -1,10 +1,10 @@
 import GalleryItem from "../GalleryItem/GalleyItem"
 
-export default function GalleryList({ gallery, clickLike }){
+export default function GalleryList({ galleryList, clickLike, handleDelete }){
 
     return(<>
-    {gallery.map(item => 
-                 <GalleryItem key={item.id} item={item} clickLike={clickLike}/>
+    {galleryList.map(item => 
+                 <GalleryItem key={item.id} item={item} clickLike={clickLike} handleDelete={handleDelete}/>
             )}
     </>)
 }
