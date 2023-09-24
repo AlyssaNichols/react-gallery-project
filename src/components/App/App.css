@@ -54,31 +54,37 @@ input {
 .addFormButton:hover {
   background-color: rgb(179, 88, 235);
 }
+.addFormButton:active {
+  transform: scale(0.93);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
+}
 
 .deleteButton {
+  font-size: 16px;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
   border: 1px solid black;
   border-radius: 3px;
   padding: 3px 10px;
-  background-color: #cc6767;
+  background-color: #e35757;
   margin-left: 10px;
-  font-size: 16px;
 }
 
 .deleteButton:hover {
-  background-color: rgb(255, 61, 27);
+  background-color: rgb(169, 68, 50);
 }
 
-.likeButton {
-  border: 1px solid black;
-  border-radius: 3px;
-  padding: 3px 10px;
-  background-color: rgb(83, 201, 97);
-  margin-left: 10px;
-  font-size: 16px;
-}
-
-.likeButton:hover {
-  background-color: rgb(34, 255, 0);
+.deleteButton:active {
+  transform: scale(0.93);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
 }
 
 .addBtn {
@@ -86,4 +92,31 @@ input {
   border-radius: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   height: 30px;
+}
+
+.likeButton:hover {
+  background-color: rgb(53, 110, 44);
+}
+
+.likeButton {
+  font-size: 16px;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 3px 10px;
+  background-color: rgb(83, 201, 97);
+  margin-left: 10px;
+}
+/* Adding transformation when the button is active */
+
+.likeButton:active {
+  transform: scale(0.93);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
 }
