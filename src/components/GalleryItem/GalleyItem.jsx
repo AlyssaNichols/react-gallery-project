@@ -95,7 +95,7 @@ export default function GalleryItem({ item, clickLike, handleDelete }) {
         <button className="deleteButton" onClick={() => handleDelete(item.id)}>
           {deleteIcon} Delete this pic
         </button>
-        <p>{item.likes} people love this pic</p>
+        <p>{item.likes} people love this picture  ◡̈ </p>
       </div>
     </>
   );
