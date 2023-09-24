@@ -31,6 +31,7 @@ export default function AddForm({
         // clear input fields
         getGallery();
         setNewPath("");
+        setNewTitle("");
         setNewDescription("");
       })
       .catch((error) => {
