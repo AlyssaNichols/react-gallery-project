@@ -41,7 +41,7 @@ export default function AddForm({
 
   // what will post to the page
   return (
-    <> 
+    <> <form>
       <h2 className="formHeader">Add Photo to the Gallery</h2>
       <input
         placeholder="Image URL"
@@ -77,6 +77,7 @@ export default function AddForm({
         <br />
         <hr />
       </div>
+      </form>
     </>
   );
 }

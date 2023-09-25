@@ -32,7 +32,7 @@ export default function GalleryItem({ item, clickLike, handleDelete }) {
 
   // for showing the image or the description
   const toggleImageDescription = () => {
-    setShowImage((prevState) => !prevState);
+    setShowImage((showImage) => !showImage);
   };
 
   // what shows on the page
