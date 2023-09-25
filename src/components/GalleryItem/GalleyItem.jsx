@@ -5,11 +5,6 @@ export default function GalleryItem({ item, clickLike, handleDelete }) {
   // state
   const [showImage, setShowImage] = useState(true);
 
-  // for showing the image or the description
-  const toggleImageDescription = () => {
-    setShowImage((prevState) => !prevState);
-  };
-
   // SVG icon from likes (heart)
   const heartIcon = (
     <svg
@@ -35,6 +30,11 @@ export default function GalleryItem({ item, clickLike, handleDelete }) {
     </svg>
   );
 
+    // for showing the image or the description
+    const toggleImageDescription = () => {
+      setShowImage((prevState) => !prevState);
+    };
+    
   // what shows on the page
   return (
     <>

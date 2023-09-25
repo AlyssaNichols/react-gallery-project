@@ -24,8 +24,8 @@ router.get("/", (req, res) => {
   const queryText = `SELECT * FROM "gallery" ORDER BY "id" ASC;`;
   pool
     .query(queryText)
-    .then((result) => {
-      res.send(result.rows);
+    .then((response) => {
+      res.send(response.rows);
     })
     .catch((error) => {
       console.log(`Error making database GET request`, error);
