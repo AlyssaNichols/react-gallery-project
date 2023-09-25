@@ -30,11 +30,11 @@ export default function GalleryItem({ item, clickLike, handleDelete }) {
     </svg>
   );
 
-    // for showing the image or the description
-    const toggleImageDescription = () => {
-      setShowImage((prevState) => !prevState);
-    };
-    
+  // for showing the image or the description
+  const toggleImageDescription = () => {
+    setShowImage((prevState) => !prevState);
+  };
+
   // what shows on the page
   return (
     <>
@@ -95,7 +95,7 @@ export default function GalleryItem({ item, clickLike, handleDelete }) {
         <button className="deleteButton" onClick={() => handleDelete(item.id)}>
           {deleteIcon} Delete this pic
         </button>
-        <p>{item.likes} people love this picture  ◡̈ </p>
+        <p>{item.likes} people love this picture ◡̈ </p>
       </div>
     </>
   );
