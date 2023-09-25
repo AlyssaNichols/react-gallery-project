@@ -37,9 +37,30 @@ In this project I used 4 components:
 
 1. If database is setup and the app is running in browser you may start adding photos with the inputs provided
 3. Add as many photos as you would like, as well as titles and descriptions of the images you are adding. Image urls and descriptions are required because they will be shown but titles are not required.
-4. Use the "like" button to increase the amount of likes of each photo.
+4. Use the "like" button to increase the amount of likes on each photo.
 5. Use the Delete button associated with each photo to remove from the app and database (cannot be undone).
 6. Click on a photo to have the photo's description displayed and then re-click the description to have to photo re-displayed.
 
+## Built With
 
+ - HTML
+ - CSS
+ - Javascript
+ - React.js
+ - PG
+ - Express.js
+ - PostgresSQL
+ - Postico
+ - Postman
+ - Git
+ - GitHub
+ - VScode
+ - Nodemon (for development)
 
+### Acknowledgement
+
+Thanks to [Emerging Digital Academy](http://www.emergingacademy.org) who equipped and helped me to make this application a reality. 
+
+### Support
+
+If you have suggestions or issues, please email me at [alyssa.s.nichols94@gmail.com](mailto:alyssa.s.nichols94@gmail.com)
