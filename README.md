@@ -41,7 +41,11 @@ In this project I used 4 components:
 5. Use the Delete button associated with each photo to remove from the app and database (cannot be undone).
 6. Click on a photo to have the photo's description displayed and then re-click the description to have to photo re-displayed.
 
-## Built With
+## Wireframe
+
+![Project Wireframe](wireframes/project-wireframe.png)
+
+### Built With
 
  - HTML
  - CSS
