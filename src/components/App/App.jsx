@@ -27,6 +27,31 @@ function App() {
       });
   };
 
+    // POST FUNCTION
+  // It will then clear the inputs
+  const addPhoto = () => {
+    // make sure the required fields are filled out
+    if (!newPath || !newDescription) {
+      alert("Please fill in all fields!");
+    }
+
+    // POST FUNCTION
+    axios
+      .post("/gallery", {
+        path: newPath,
+        description: newDescription,
+      })
+      .then((response) => {
+        // clear input fields
+        getGallery();
+        setNewPath("");
+        setNewTitle("");
+        setNewDescription("");
+      })
+      .catch((error) => {
+        alert("Error in POSTing new photo");
+      });
+  };
   // PUT function to change the "likes" on each photo
   const clickLike = (id) => {
     axios
@@ -38,6 +63,18 @@ function App() {
         console.log("Error in clicking like PUT", error);
       });
   };
+  // PUT function to change the "likes" on each photo
+  const resetLikes = () => {
+    axios
+      .put(`/gallery/reset/`)
+      .then((response) => {
+        getGallery();
+      })
+      .catch((error) => {
+        console.log("Error in resetting likes PUT", error);
+      });
+  };
+
 
   // DELETE function to remove a photo from the online gallery AND database
   const handleDelete = (id) => {
@@ -65,11 +102,13 @@ function App() {
         setNewPath={setNewPath}
         newDescription={newDescription}
         setNewDescription={setNewDescription}
+        addPhoto={addPhoto}
       />
       <GalleryList
         clickLike={clickLike}
         galleryList={galleryList}
         handleDelete={handleDelete}
+        resetLikes={resetLikes}
       />
     </div>
   );

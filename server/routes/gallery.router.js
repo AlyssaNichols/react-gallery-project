@@ -17,7 +17,22 @@ router.put("/like/:id", (req, res) => {
       console.log("error caught in PUT /like: ", error);
     });
 });
-// END PUT ROUTE
+// PUT Route from DB
+router.put("/reset/", (req, res) => {
+  console.log(req.params);
+  const queryText = `UPDATE "gallery" SET "likes"= 0;`;
+  pool
+    .query(queryText)
+    .then(() => {
+      res.sendStatus(204);
+    })
+    .catch((error) => {
+      console.log("error caught in PUT reset likes", error);
+    });
+});
+// END PUT ROUTE// END PUT ROUTE
+
+
 
 // GET route from DB
 router.get("/", (req, res) => {

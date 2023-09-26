@@ -90,12 +90,12 @@ export default function GalleryItem({ item, clickLike, handleDelete }) {
         <br />
         <br />
         <button className="likeButton" onClick={() => clickLike(item.id)}>
-          {heartIcon} Love this pic!
+          {heartIcon} Like this pic!
         </button>
         <button className="deleteButton" onClick={() => handleDelete(item.id)}>
           {deleteIcon} Delete this pic
         </button>
-        <p>{item.likes} people love this picture ◡̈ </p>
+        <p>{item.likes} people like this picture ◡̈ </p>
       </div>
     </>
   );
