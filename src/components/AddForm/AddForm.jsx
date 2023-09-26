@@ -47,10 +47,7 @@ export default function AddForm({
         >
           Add Photo
         </button>
-        <br />
-        <br />
-        <hr />
-      </div>
+        </div>
       </form>
     </>
   );

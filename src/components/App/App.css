@@ -1,5 +1,6 @@
 body {
-  background-color: #e3e5ea;;
+  background-color: #e3e5ea;
+
 }
 
 .App {
@@ -13,6 +14,19 @@ body {
   font-family:serif;
   font-weight: lighter;
   font-size: 20px;
+}
+h4{
+  color: black;
+  font-family:sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid; /* Add a 1px thick underline */
+  border-top: 1px solid;
+  padding: 5px; 
 }
 
 .App-title {
@@ -38,12 +52,13 @@ input {
   border-radius: 3px;
   height: 26px;
   width: 18%;
+  font-family:sans-serif;
 }
 
 /* ~~~~~~~~~~ Button Style ~~~~~~~~~~ */
 
 .addFormButton {
-  background-color: rgb(241, 228, 249);
+  background-color: rgb(209, 231, 232);
   border: 1px solid black;
   border-radius: 3px;
   padding: 5px 20px;
@@ -52,7 +67,7 @@ input {
 }
 
 .addFormButton:hover {
-  background-color: rgb(179, 88, 235);
+  background-color: rgb(78, 235, 250);
 }
 .addFormButton:active {
   transform: scale(0.93);
@@ -62,8 +77,8 @@ input {
 }
 
 .deleteButton {
-  font-size: 16px;
-  color: #fff;
+  font-size: 14px;
+  color: white;
   border-radius: 5px;
   box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
   cursor: pointer;
@@ -72,12 +87,12 @@ input {
   border: 1px solid black;
   border-radius: 3px;
   padding: 3px 10px;
-  background-color: #e35757;
+  background-color: rgb(2, 2, 2);
   margin-left: 10px;
 }
 
 .deleteButton:hover {
-  background-color: rgb(169, 68, 50);
+  background-color: rgb(238, 57, 25);
 }
 
 .deleteButton:active {
@@ -93,14 +108,9 @@ input {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   height: 30px;
 }
-
-.likeButton:hover {
-  background-color: rgb(53, 110, 44);
-}
-
-.likeButton {
+.resetLikes{
   font-size: 16px;
-  color: #fff;
+  color: black;
   border-radius: 5px;
   box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
   cursor: pointer;
@@ -109,11 +119,39 @@ input {
   border: 1px solid black;
   border-radius: 3px;
   padding: 3px 10px;
-  background-color: rgb(83, 201, 97);
+  background-color: rgb(248, 244, 151);
+  margin-bottom: 10px;
+}
+.resetLikes:hover {
+  background-color: rgb(247, 235, 11);
+}
+
+.resetLikes:active {
+  transform: scale(0.93);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
+}
+
+.likeButton:hover {
+  background-color: rgb(66, 227, 141);
+}
+
+.likeButton {
+  font-size: 14px;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 3px 10px;
+  background-color: rgb(246, 244, 246);
   margin-left: 10px;
 }
 /* Adding transformation when the button is active */
-
 .likeButton:active {
   transform: scale(0.93);
   /* Scaling button to 0.98 to its original size */
