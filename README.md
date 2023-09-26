@@ -42,7 +42,7 @@ In this project I used 4 components:
 6. Click on a photo to have the photo's description displayed and then re-click the description to have to photo re-displayed.
 
 ## Wireframe
-
+I have attached a photo of my gallery with the photos from my Database
 ![Project Wireframe](wireframes/project-wireframe.png)
 
 ### Built With
