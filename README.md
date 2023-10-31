@@ -14,10 +14,10 @@ Link to software that is required to install the app (e.g. node).
 ## Installation
 
 1. Clone Repository
-4. Run 'npm install'
-5. Run 'npm run server'
-6. Run 'npm run client' - you will need multiple terminals open for this
-7. App should open in your browser
+2. Run 'npm install'
+3. Run 'npm run server'
+4. Run 'npm run client' - you will need multiple terminals open for this
+5. App should open in your browser
 
 Running the server code requires `nodemon`. If you don't already have `nodemon`, install it globally with `npm install nodemon --global`.
 
@@ -36,10 +36,10 @@ In this project I used 4 components:
 ## Usage
 
 1. If database is setup and the app is running in browser you may start adding photos with the inputs provided
-3. Add as many photos as you would like, as well as titles and descriptions of the images you are adding. Image urls and descriptions are required because they will be shown but titles are not required.
-4. Use the "like" button to increase the amount of likes on each photo.
-5. Use the Delete button associated with each photo to remove from the app and database (cannot be undone).
-6. Click on a photo to have the photo's description displayed and then re-click the description to have to photo re-displayed.
+2. Add as many photos as you would like, as well as titles and descriptions of the images you are adding. Image urls and descriptions are required because they will be shown but titles are not required.
+3. Use the "like" button to increase the amount of likes on each photo.
+4. Use the Delete button associated with each photo to remove from the app and database (cannot be undone).
+5. Click on a photo to have the photo's description displayed and then re-click the description to have to photo re-displayed.
 
 ## Project Wireframe
 I have attached a photo of my gallery with the photos from my Database
